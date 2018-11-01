@@ -1,17 +1,18 @@
 export class User {
-    Id: number;
-    Username: string;
-    Password: string;
-    FirstName: string;
-    LastName: string;
-    Phone: string;
-    Email: string;
-    IsReviewer: boolean;
-    IsAdmin: boolean;
+    id: number;
+    userName: string;
+    password: string;
+    firstName: string;
+    lastName: string;
+    phoneNumber: string;
+    email: string;
+    isReviewer: boolean;
+    isAdmin: boolean;
 
     constructor() {
-        this.Id = 0;
-        this.IsReviewer = false;
-        this.IsAdmin = false;
+        this.id = 0;
+        this.password = 'password';
+        this.isReviewer = false;
+        this.isAdmin = false;
     }
 }
