@@ -1,18 +1,22 @@
-<div>
+<app-menu></app-menu>
+<div class="component">
   <div>
     <span>User Detail</span>
   </div>
   <p *ngIf='!user'>Retrieving Data ... this may take a while...</p>
-  <table class="table table-sm" *ngIf="user">
-    <tr><td>Id:</td><td>{{ user.id }}</td></tr>
-    <tr><td>Name:</td><td>{{ user.firstName }} {{ user.lastName }}</td></tr>
-    <tr><td>UserName:</td><td>{{ user.userName }}</td></tr>
-    <tr><td>Phone:</td><td>{{ user.phoneNumber }}</td></tr>
-    <tr><td>Email:</td><td>{{ user.email }}</td></tr>
-    <tr><td>Reviewer?:</td><td>{{ user.isReviewer ? "Yes" : "No" }}</td></tr>
-    <tr><td>Admin?:</td><td>{{ user.isAdmin ? "Yes" : "No" }}</td></tr>
-  </table>
-  <div>
-    <button class='btn btn-danger' (click)='delete()'>Delete</button>
+  <div *ngIf="user">
+    <table class="table table-sm" *ngIf="user">
+      <tr><td>Id:</td><td>{{ user.id }}</td></tr>
+      <tr><td>Name:</td><td>{{ user.firstName }} {{ user.lastName }}</td></tr>
+      <tr><td>UserName:</td><td>{{ user.userName }}</td></tr>
+      <tr><td>Phone:</td><td>{{ user.phoneNumber }}</td></tr>
+      <tr><td>Email:</td><td>{{ user.email }}</td></tr>
+      <tr><td>Reviewer?:</td><td>{{ user.isReviewer ? "Yes" : "No" }}</td></tr>
+      <tr><td>Admin?:</td><td>{{ user.isAdmin ? "Yes" : "No" }}</td></tr>
+    </table>
+    <div *ngIf='isAdmin'>
+      <a class="btn btn-warning" routerLink="/users/edit/{{user.id}}">Edit</a>
+      | <button class='btn btn-danger' (click)='delete()'>Delete</button>
+    </div>
   </div>
 </div>

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
+import { SystemService } from '../system/system.service';
 import { User } from './user.class';
 import { JsonResponse } from '../util/json-response.class';
 
@@ -31,5 +32,8 @@ export class UserService {
     return this.http.post(url + "remove", user) as Observable<JsonResponse>;
   }
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient,
+    private sys: SystemService
+    ) { }
 }
