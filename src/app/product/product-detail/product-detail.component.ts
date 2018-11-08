@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
+import { SystemService } from '../../system/system.service';
 import { ProductService } from '../product.service';
 import { Product } from '../product.class';
 
@@ -11,6 +12,7 @@ import { Product } from '../product.class';
 })
 export class ProductDetailComponent implements OnInit {
 
+  isAdmin: boolean
   product: Product;
 
   delete(): void {
@@ -22,12 +24,14 @@ export class ProductDetailComponent implements OnInit {
   }
 
   constructor(
+    private sys: SystemService,
     private productsvc: ProductService, 
     private route: ActivatedRoute,
     private router: Router
   ) { }
 
   ngOnInit() {
+    this.sys.checkForLogin();
     // gets the :id from the router
     let id = this.route.snapshot.params.id;
     // get the product from the product service
@@ -36,6 +40,7 @@ export class ProductDetailComponent implements OnInit {
         console.log("resp: ", resp);
         this.product = resp.data;
       });
+    this.isAdmin = (this.sys.user != null) ? this.sys.user.isAdmin : false;
   }
 
 }
