@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { UserService } from './user/user.service';
 
 @Component({
   selector: 'app-root',
@@ -8,9 +7,5 @@ import { UserService } from './user/user.service';
 })
 export class AppComponent {
   title = 'prsng';
-
-  constructor(user: UserService) {
-    user.list().subscribe(resp => { console.log(resp); });
-  }
 
 }
