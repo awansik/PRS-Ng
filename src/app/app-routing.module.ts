@@ -22,8 +22,7 @@ import { RequestDetailComponent } from './request/request-detail/request-detail.
 import { RequestCreateComponent } from './request/request-create/request-create.component';
 import { RequestEditComponent } from './request/request-edit/request-edit.component';
 import { RequestLinesComponent } from './request/request-lines/request-lines.component';
-// import { RequestReviewDetailComponent } './request/request-review-detail/request-review-detail.component';
-// import { RequestReviewListComponent } './request/request-review-list/request-review-list.component';
+import { RequestReviewComponent } from './request/request-review/request-review.component';
 
 import { ReqlineDetailComponent } from './reqlines/reqline-detail/reqline-detail.component';
 import { ReqlineEditComponent } from './reqlines/reqline-edit/reqline-edit.component';
@@ -57,8 +56,7 @@ const routes: Routes = [
   { path: 'requests/detail/:id', component: RequestDetailComponent },
   { path: 'requests/edit/:id', component: RequestEditComponent },
   { path: 'requests/lines/:id', component: RequestLinesComponent },
-  // { path: 'requests/review-detail/:id', component: RequestReviewDetailComponent },
-  // { path: 'requests/review-list', component: RequestReviewListComponent },
+  { path: 'requests/review', component: RequestReviewComponent },
 
   { path: 'reqlines/create/:prid', component: ReqlineCreateComponent },
   { path: 'reqlines/detail/:id', component: ReqlineDetailComponent },
