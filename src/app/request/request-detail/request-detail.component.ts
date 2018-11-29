@@ -32,12 +32,14 @@ export class RequestDetailComponent implements OnInit {
   }
 
   constructor(
+    private sys: SystemService,
     private requestsvc: RequestService, 
     private route: ActivatedRoute,
     private router: Router
   ) { }
 
   ngOnInit() {
+    this.sys.checkForLogin();
     // gets the :id from the router
     let id = this.route.snapshot.params.id;
     // get the request from the request service

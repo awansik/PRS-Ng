@@ -10,6 +10,7 @@ import { UserListComponent } from './user/user-list/user-list.component';
 import { UserDetailComponent } from './user/user-detail/user-detail.component';
 import { UserCreateComponent } from './user/user-create/user-create.component';
 import { UserEditComponent } from './user/user-edit/user-edit.component';
+import { UserLoginComponent } from './user/user-login/user-login.component';
 
 import { MenuComponent } from './menu/menu/menu.component';
 import { HomeComponent } from './home/home.component';
@@ -22,24 +23,20 @@ import { VendorEditComponent } from './vendor/vendor-edit/vendor-edit.component'
 
 import { BoolDisplayPipe } from './pipes/bool-display.pipe';
 import { SortUsersPipe } from './pipes/sort-users.pipe';
+import { SortPipe } from './pipes/sort.pipe';
 
 import { ProductListComponent } from './product/product-list/product-list.component';
 import { ProductDetailComponent } from './product/product-detail/product-detail.component';
 import { ProductCreateComponent } from './product/product-create/product-create.component';
 import { ProductEditComponent } from './product/product-edit/product-edit.component';
 
-import { UserLoginComponent } from './user/user-login/user-login.component';
 
 import { RequestListComponent } from './request/request-list/request-list.component';
 import { RequestDetailComponent } from './request/request-detail/request-detail.component';
 import { RequestCreateComponent } from './request/request-create/request-create.component';
 import { RequestEditComponent } from './request/request-edit/request-edit.component';
 import { RequestLinesComponent } from './request/request-lines/request-lines.component';
-
-import { SortPipe } from './pipes/sort.pipe';
-
-// import { RequestReviewDetailComponent } './request/request-review-detail/request-review-detail.component';
-// import { RequestReviewListComponent } './request/request-review-list/request-review-list.component';
+import { RequestReviewComponent } from './request/request-review/request-review.component';
 
 import { ReqlineDetailComponent } from './reqlines/reqline-detail/reqline-detail.component';
 import { ReqlineEditComponent } from './reqlines/reqline-edit/reqline-edit.component';
@@ -77,8 +74,8 @@ import { ReqlineCreateComponent } from './reqlines/reqline-create/reqline-create
     RequestCreateComponent,
     RequestEditComponent,
     RequestLinesComponent,
-    // RequestReviewDetailComponent,
-    // RequestReviewListComponent,
+    
+    RequestReviewComponent,
 
     ReqlineCreateComponent,
     ReqlineDetailComponent,

@@ -1,3 +1,4 @@
+<app-menu></app-menu>
 <div class="component">
       <div>
         <span>Request Detail</span>
@@ -19,7 +20,7 @@
           <button class="btn btn-success" (click)="review()">Review</button> |
         </span>
         <a routerLink="/requests/edit/{{request.Id}}" class="btn btn-warning">Edit</a>
-        <button class="btn btn-danger" (click)="delete()">Delete</button>
+        | <button class="btn btn-danger" (click)="delete()">Delete</button>
       </div>
     </div>
   </div> 
